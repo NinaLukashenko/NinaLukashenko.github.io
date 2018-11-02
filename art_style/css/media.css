@@ -1,0 +1,20 @@
+@media only screen and (max-width: 928px) {
+	#main_menu li:nth-child(2) {
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#RecallForm {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.title_block h1 {
+		font-size: 30px;
+	}
+	.title_block p {
+		font-size: 18px;
+	}
+}
