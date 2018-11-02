@@ -22,7 +22,9 @@ header {
 }
 
 #main_menu li a:hover,
-#main_menu li a:focus {
+#main_menu li a:focus,
+#main_menu li a.active-ref
+ {
 	background-color: transparent;
 	color: #25286e;
 }
