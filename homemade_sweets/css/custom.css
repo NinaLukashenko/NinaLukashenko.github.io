@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,700');
+/* font-family: 'Comfortaa', cursive; */
+
+.nav-link {
+	color:rgba(255, 255, 255, 0.9) !important;
+	font-family: 'Comfortaa', cursive;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.nav-link:hover, .nav-link:focus {
+	color: rgba(120, 31, 44, 0.95) !important;
+}
+
+/*hero section*/
+#hero {
+	background-image: url(../img/hero.jpg);
+	background-color:rgb(245, 245, 245);
+	min-height:37.5rem;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	text-align: center;
+	padding-top: 4.375rem;
+}
+
+@media screen and (max-width: 767px) {
+	#hero {
+	min-height:19.5rem;	
+	}
+}
+
+#hero h1 {
+	font-family: 'Comfortaa', cursive;
+	color: rgba(120, 31, 44, 0.95);
+	font-weight: 700;
+}
+
+#hero h2 {
+	font-family: 'Comfortaa', cursive;
+	color: rgba(120, 31, 44, 0.95);
+	letter-spacing: 0.1875rem;
+}
+
+/*features section*/
+#features {
+	padding-top: 6.25rem;
+	padding-bottom: 4.6875rem;
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+}
+
+@media screen and (max-width: 767px) {
+	#features {
+	padding-top: 3.25rem;	
+	padding-bottom: 3.5rem;
+	}
+}
+
+.feature-item {
+	padding-bottom: 2.25rem;
+}
+
+.feature-item > i.fas {
+	padding-bottom: 1.25rem;
+	color: rgb(235, 104, 100);
+	font-size: 3.4375rem;
+}
+
+#features h3 {
+	font-family: 'Comfortaa', cursive;
+	color: rgb(115, 19, 16);
+}
+
+.feature-item--decoration > i {
+	color: rgb(115, 19, 16);
+	padding-bottom: 1.75rem;
+}
+
+/*chevron*/
+#chevron {
+	position: relative;
+	margin-top: 2.1875rem;
+	height: 4.0625rem;
+}
+
+#chevron:before {
+	content: "";
+	position: absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width: 50%;
+	background-color: rgb(235, 104, 100);
+	transform: skew(0, 3deg);
+}
+
+#chevron:after {
+	content: "";
+	position: absolute;
+	top:0;
+	right:0;
+	height: 100%;
+	width: 50%;
+	background-color: rgb(235, 104, 100);
+	transform: skew(0, -3deg);
+}
+
+/*chevron-end*/
+#chevron-end {
+	position: relative;
+	margin-top: 2.1875rem;
+	height: 4.0625rem;
+}
+
+#chevron-end:before {
+	content: "";
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 50%;
+	background-color: rgb(235, 104, 100);
+	transform: skew(0, -3deg);
+}
+
+#chevron-end:after {
+	content: "";
+	position: absolute;
+	top:0;
+	right: 0;
+	height: 100%;
+	width: 50%;
+	background-color: rgb(235, 104, 100);
+	transform: skew(0, 3deg);
+}
+
+
+/*cakes & sweet sections*/
+#cakes {
+	padding-top: 2.1875rem;
+}
+
+@media screen and (max-width: 767px) {
+	#cakes {
+	padding-top: 0.25rem;	
+	}
+}
+
+#sweets {
+	padding-top: 3.25rem;
+}
+
+@media screen and (max-width: 767px) {
+	#sweets {
+	padding-top: 2.25rem;
+	}
+}
+
+#cakes h4, #sweets h4{
+	font-family: 'Comfortaa', cursive;
+	color: rgb(115, 19, 16);
+}
+
+#button-showMoreCakes, #button-showMoreSweets {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	color: rgba(115, 19, 16, 0.7);
+	font-weight: 300;
+}
+
+#additional-cakes, #additional-sweets {
+	display: none;
+	padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
+}
+
+/*styles for cards in sections cakes & sweets*/
+.card {
+	margin-top: 1.5625rem;
+	font-family: 'Comfortaa', cursive;
+}
+
+.card-body {
+	padding: 0.25rem;
+}
+
+.card-footer {
+	padding: 0.4375rem;
+}
+
+.card-footer > p {
+	margin-bottom: 0;
+}
+
+
+/*reviews section*/
+#reviews {
+	padding-top: 3.125rem;
+	font-family: 'Comfortaa', cursive;
+}
+
+@media screen and (max-width: 767px) {
+	#reviews {
+	padding-top: 2.125rem;
+	}
+}
+
+
+#reviews h4 {
+	font-family: 'Comfortaa', cursive;
+	color: rgb(115, 19, 16);
+	padding-bottom: 1.25rem;
+}
+
+#reviews blockquote {
+	font-size: 1rem;
+}
+
+/*postReviews section*/
+#postReviews {
+	background-image:url("../img/birthday-party.jpg");
+	min-height:34.375rem;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	-webkit-background-size: contain;
+	background-size: contain;
+	text-align: center;
+	padding-top: 31.25rem;
+	color: rgb(255, 255, 255);
+	font-size: 1.5rem;
+	font-family: 'Comfortaa', cursive;
+	font-weight: 700;
+}
+
+
+/*price*/
+#price {
+	padding-top: 3.125rem;
+	font-family: 'Comfortaa', cursive;
+	text-align:center;
+}
+
+#price h4 {
+	font-family: 'Comfortaa', cursive;
+	color: rgb(115, 19, 16);
+	padding-bottom: 1.25rem;
+}
+
+#price h5 {
+	font-family: 'Comfortaa', cursive;
+	color: rgb(235, 104, 100);
+	padding: 0.625rem;
+	border-radius: 0.1875rem;
+}
+
+#price h5 > span {
+	margin-bottom: 2.8125rem;
+	font-size: 0.8rem;
+	color: rgb(34, 34, 34);
+}
+
+p.sale {
+	color: rgb(115, 19, 16);
+	padding-top: 2.1875rem;
+}
+
+#price p.sale > span {
+	color: rgb(235, 104, 100);
+}
+
+/*parallax*/
+#before-parallax {
+	position: relative;
+	margin-top: 4.6875rem;
+	height: 4.0625rem;
+}
+
+#before-parallax:before {
+	content: "";
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 50%;
+	background-color: rgb(230, 128, 133);
+	transform: skew(0, -3deg);
+	z-index:10;
+}
+
+#before-parallax:after {
+	content: "";
+	position: absolute;
+	top:0;
+	right: 0;
+	height: 100%;
+	width: 50%;
+	background-color: rgb(230, 128, 133);
+	transform: skew(0, 3deg);
+	z-index:10;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url('../img/birthday-party.jpg');
+    top:-1.875rem;
+
+    /* Set a specific height */
+    min-height: 40.625rem; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax > p {
+	margin-top:6.25rem;
+	font-size: 2.5rem;
+
+}
+
+.parallax > p > span {
+	color: rgb(120, 31, 44);
+	background-color: rgba(255, 255, 225, 0.5);
+	font-family: 'Comfortaa', cursive;
+	font-weight: 700;
+}
+
+#after-parallax {
+	position: relative;
+	height: 4.0625rem;
+	margin-top: -4.0625rem;
+}
+
+#after-parallax:before {
+	content: "";
+	position: absolute;
+	top:0;
+	left: 0;
+	height: 100%;
+	width: 50%;
+	background-color: rgb(255, 255, 255);
+	transform: skew(0, 3deg);
+	z-index:10;
+}
+
+#after-parallax:after {
+	content: "";
+	position: absolute;
+	top:0;
+	right: 0;
+	height: 100%;
+	width: 50%;
+	background-color: rgb(255, 255, 255);
+	transform: skew(0, -3deg);
+	z-index:10;
+}
+
+/*delivery*/ 
+
+#delivery {
+	padding-top: 3.125rem;
+	font-family: 'Comfortaa', cursive;
+	text-align:center;
+}
+
+#delivery h4 {
+	font-family: 'Comfortaa', cursive;
+	color: rgb(115, 19, 16);
+	padding-bottom: 1.25rem;
+}
+
+#way a {
+	margin-bottom: 1.875rem;
+}
+
+.btn-outline-secondary {
+	font-family: 'Comfortaa', cursive;
+	font-weight: 300;
+	color: rgb(34, 34, 34);
+}
+
+/*contacts*/ 
+#contacts {
+	margin-top: 3.125rem;
+	padding-top: 3.125rem;
+	font-family: 'Comfortaa', cursive;
+	text-align:center;
+	background-color: rgb(235, 104, 100);
+}
+
+#contacts h4 {
+	font-family: 'Comfortaa', cursive;
+	color: rgb(255, 255, 255);
+	padding-bottom: 0.3125rem;
+}
+
+#contacts .fab, #contacts .fas {
+	color: rgb(34, 34, 34);
+	padding: 0.5rem;
+}
+
+#contacts .fab:hover, #contacts .fab:active  {
+	color: rgb(115, 19, 16);
+}
+
+#copyright-block {
+	background-color: rgb(255, 85, 85);
+	padding: 0.625rem;
+	margin-top: 1.25rem;
+}
