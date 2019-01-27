@@ -1,0 +1,148 @@
+@import url(https://fonts.googleapis.com/css?family=Vollkorn:400,700);
+body {
+	font-family: Vollkorn,serif;
+	font-size: 1.2rem;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: 700;
+}
+.navbar {
+	font-size: 1.2rem;
+}
+.navbar-brand {
+	margin-left: 1rem;
+}
+.navbar-toggler {
+	margin-right: 1rem;
+}
+.navbar--logo {
+	width: 8rem;
+}
+.navbar--menu-icon {
+	color: #fdb813;
+}
+.navbar-light .navbar-toggler {
+	border-color: #db2723;
+}
+.navbar-light .navbar-nav .menu-item a {
+	color: #000;
+	padding: .7rem;
+	text-decoration: none;
+}
+.navbar-light .navbar-nav .menu-item a:hover {
+	color: #db2723;
+}
+.navbar-light .navbar-nav .menu-item a:focus {
+	background-color: #db2723;
+	color: #fff;
+}
+.menu--icons-block {
+	margin-left: 3.5rem;
+	text-align: center;
+}
+@media screen and (max-width:991px) {
+	.menu--icons-block {
+		margin-left: 0;
+	}
+}
+.fa-facebook-messenger,.fa-facebook-square,.fa-instagram {
+	border-radius: 100%;
+	display: inline-block;
+	height: 1.2rem;
+	width: 1.2rem;
+}
+.fa-facebook-square {
+	color: #125488;
+	transition: .2s;
+}
+.fa-facebook-messenger:hover,.fa-facebook-square:hover,.fa-instagram:hover {
+	font-size: 1.35rem;
+}
+.fa-facebook-messenger {
+	color: #47a6d2;
+	transition: .2s;
+}
+.fa-instagram {
+	color: red;
+	transition: .2s;
+}
+.block--tagline {
+	background-color: red;
+	color: #fff;
+	font-size: 4rem;
+	padding: 1rem;
+	text-align: center;
+}
+@media screen and (max-width:991px) {
+	.block--tagline {
+		font-size: 2rem;
+		padding: .5rem;
+	}
+}
+.block--about {
+	margin-bottom: 3rem;
+	margin-top: 3rem;
+}
+.about--7km {
+	font-size: 3.5rem;
+}
+.block--about-shoes {
+	line-height: 2.7rem;
+	list-style-type: none;
+}
+.fa-check {
+	color: red;
+	font-size: 1rem;
+}
+.fa-shoe-prints {
+	color: red;
+	font-size: 1.2rem;
+}
+.content--red-text {
+	color: red;
+}
+.features--photos {
+	width: 95%;
+}
+.feature--block {
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+.feature--block-text {
+	margin-bottom: auto;
+	margin-top: auto;
+	text-align: center;
+}
+@media screen and (max-width:991px) {
+	.feature--block {
+		padding: 1rem;
+	}
+}
+.footer--block {
+	background-color: #f4f4f4;
+	padding: 3rem 1.5rem;
+	text-align: center;
+}
+.copyright--block {
+	padding: 1.5rem;
+	text-align: center;
+}
+
+.footer--widget{
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+}
+
+.footer--widget ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+.footer--widget .fa-facebook-messenger,.footer--widget .fa-facebook-square,.footer--widget .fa-instagram {
+	height: 2rem;
+	width: 2rem;
+	font-size: 2rem;
+}
+
+.fa-map-marker-alt {
+	font-size: 2rem;
+}
