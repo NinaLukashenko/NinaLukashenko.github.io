@@ -19,9 +19,6 @@
 //      е. очистить форму
 
 
-//If there is a need to clean local storage:
-//localStorage.clear();
-
 // UI Elements
 const formCol = document.querySelector('.form-col');
 const form = document.forms['addTodoForm'];
@@ -36,33 +33,22 @@ let editedTask;
  * todosStorage - is an object for storaging all tasks
  * return {{}};
  */
-let todosStorage;
+const todosStorage = {
+	todos: []	
+};
 
-//check if there something is in the local storage:
+//If there is a need to clean local storage:
+//localStorage.clear();
+
+//check if there something is in local storage
 if (localStorage.length !== 0) {
-	let browserStorage = localStorage.getItem('data');
-	todosStorage = JSON.parse(browserStorage);
-		for (let i = 0; i < todosStorage.todos.length; i++) {
+	let values = Object.values(localStorage);
+
+	for (let i = 0; i < localStorage.length; i++) {
+		todosStorage.todos.push(JSON.parse(values[i]));
 		addNewTodoToView(todosStorage.todos[i]);
 	}
-} else {
-	todosStorage = {
-	todos: []	
-	};
 }
-
-
-/**
- * [updateLocalStorage description]
- * @param  {Object} todosStorage [description]
- * @return {Object}         [description]
- */
-function updateLocalStorage(todosStorage) {
-	let newtodosStorage = JSON.stringify(todosStorage);
-	localStorage.setItem('data', newtodosStorage);
-	return localStorage;
-}
-
 
 
 // event handling
@@ -156,13 +142,23 @@ function addNewTodoToStorage(title, text) {
 	todosStorage.todos.push(newTodo);
 
 	//Update LocalStorage:
-	updateLocalStorage(todosStorage);
+	addNewTodoToLocalStorage(newTodo)
 
 	// Добавим в разметку
 	addNewTodoToView(newTodo);
 
 	return todosStorage.todos;
 };
+
+/**
+ * [addNewTodoToLocalStorage description]
+ * @param {Object} todo [description]
+ * @return {[type]}    [description]
+ */
+function addNewTodoToLocalStorage(todo) {
+	let newTodo = JSON.stringify(todo);
+	localStorage.setItem(todo.id, newTodo);
+}
 
 /**
  * [description]
@@ -183,13 +179,23 @@ function deleteTodoFromStorage(id) {
     }
 
     //Update LocalStorage:
-	updateLocalStorage(todosStorage);
+	deleteTodoFromLocalStorage(removedTask[0].id)
 
     // удаляем с разметки
     deleteTodoFromView(id);
     
     return removedTask;
  }
+
+/**
+ * [deleteTodoFromLocalStorage description]
+ * @param  {String} id [description]
+ * @return {[type]}    [description]
+ */
+ function deleteTodoFromLocalStorage(id) {
+ 	localStorage.removeItem(id);
+ }
+
 
 /**
  * [checkId description]
@@ -276,13 +282,24 @@ function editTaskStorage(id, title, text) {
 	editedTask.text = text;
 
 	//Update LocalStorage:
-	updateLocalStorage(todosStorage);
+	updateTodoInLocalStorage(editedTask);
 
 	editTaskView(id, title, text);  
 
 	button.classList.replace('btn-secondary', 'btn-info'); 
 	button.textContent = "Add Task";
 }
+
+/**
+ * [updateTodoInLocalStorage description]
+ * @param  {Object} todo [description]
+ * @return {[type]}      [description]
+ */
+	function updateTodoInLocalStorage(todo) {
+		let newTodo = JSON.stringify(todo);
+		localStorage.setItem(todo.id, newTodo);
+	}
+
 
 /**
  * editTaskView - меняет title & text для отредактированной таски в UI;
