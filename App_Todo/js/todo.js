@@ -19,13 +19,8 @@
 //      е. очистить форму
 
 
-/**
- * todosStorage - обьект для хранения всех todos
- * @type {Object}
- */
-const todosStorage = {
-	todos: []	
-};
+//If there is a need to clean local storage:
+//localStorage.clear();
 
 // UI Elements
 const formCol = document.querySelector('.form-col');
@@ -36,6 +31,39 @@ const text = form.elements['text'];
 const button = form.elements['form-main-btn'];
 
 let editedTask;
+
+/**
+ * todosStorage - is an object for storaging all tasks
+ * return {{}};
+ */
+let todosStorage;
+
+//check if there something is in the local storage:
+if (localStorage.length !== 0) {
+	let browserStorage = localStorage.getItem('data');
+	todosStorage = JSON.parse(browserStorage);
+		for (let i = 0; i < todosStorage.todos.length; i++) {
+		addNewTodoToView(todosStorage.todos[i]);
+	}
+} else {
+	todosStorage = {
+	todos: []	
+	};
+}
+
+
+/**
+ * [updateLocalStorage description]
+ * @param  {Object} todosStorage [description]
+ * @return {Object}         [description]
+ */
+function updateLocalStorage(todosStorage) {
+	let newtodosStorage = JSON.stringify(todosStorage);
+	localStorage.setItem('data', newtodosStorage);
+	return localStorage;
+}
+
+
 
 // event handling
 form.addEventListener('submit', (e) => {
@@ -127,6 +155,9 @@ function addNewTodoToStorage(title, text) {
 	const newTodo = {title, text, id: generateId()};
 	todosStorage.todos.push(newTodo);
 
+	//Update LocalStorage:
+	updateLocalStorage(todosStorage);
+
 	// Добавим в разметку
 	addNewTodoToView(newTodo);
 
@@ -150,6 +181,9 @@ function deleteTodoFromStorage(id) {
             break;
         }
     }
+
+    //Update LocalStorage:
+	updateLocalStorage(todosStorage);
 
     // удаляем с разметки
     deleteTodoFromView(id);
@@ -225,7 +259,7 @@ function alertTemplate(className, message) {
     `;
 }
 
-addNewTodoToStorage('My title 1', 'My text 1');
+//addNewTodoToStorage('My title 1', 'My text 1');
 
 
 // MAKE EDIT WORK:
@@ -240,6 +274,9 @@ addNewTodoToStorage('My title 1', 'My text 1');
 function editTaskStorage(id, title, text) {
 	editedTask.title = title;
 	editedTask.text = text;
+
+	//Update LocalStorage:
+	updateLocalStorage(todosStorage);
 
 	editTaskView(id, title, text);  
 
