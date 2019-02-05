@@ -1,0 +1,8 @@
+td {
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-link {
+	color: white;
+}
