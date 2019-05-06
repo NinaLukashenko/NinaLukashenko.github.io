@@ -46,7 +46,7 @@
 /*features section*/
 #features {
 	padding-top: 6.25rem;
-	padding-bottom: 4.6875rem;
+	/*padding-bottom: 4.6875rem;*/
 	text-align: center;
 	font-family: 'Comfortaa', cursive;
 }
@@ -54,7 +54,6 @@
 @media screen and (max-width: 767px) {
 	#features {
 	padding-top: 3.25rem;	
-	padding-bottom: 3.5rem;
 	}
 }
 
@@ -139,23 +138,11 @@
 
 /*cakes & sweet sections*/
 #cakes {
-	padding-top: 2.1875rem;
-}
-
-@media screen and (max-width: 767px) {
-	#cakes {
-	padding-top: 0.25rem;	
-	}
+	padding-top: 5rem;
 }
 
 #sweets {
-	padding-top: 3.25rem;
-}
-
-@media screen and (max-width: 767px) {
-	#sweets {
-	padding-top: 2.25rem;
-	}
+	padding-top: 5rem;
 }
 
 #cakes h4, #sweets h4{
@@ -197,16 +184,9 @@
 
 /*reviews section*/
 #reviews {
-	padding-top: 3.125rem;
+	padding-top: 5rem;
 	font-family: 'Comfortaa', cursive;
 }
-
-@media screen and (max-width: 767px) {
-	#reviews {
-	padding-top: 2.125rem;
-	}
-}
-
 
 #reviews h4 {
 	font-family: 'Comfortaa', cursive;
@@ -237,7 +217,7 @@
 
 /*price*/
 #price {
-	padding-top: 3.125rem;
+	padding-top: 5rem;
 	font-family: 'Comfortaa', cursive;
 	text-align:center;
 }
@@ -362,7 +342,7 @@ p.sale {
 /*delivery*/ 
 
 #delivery {
-	padding-top: 3.125rem;
+	padding-top: 5rem;
 	font-family: 'Comfortaa', cursive;
 	text-align:center;
 }
@@ -385,7 +365,7 @@ p.sale {
 
 /*contacts*/ 
 #contacts {
-	margin-top: 3.125rem;
+	margin-top: 5rem;
 	padding-top: 3.125rem;
 	font-family: 'Comfortaa', cursive;
 	text-align:center;
